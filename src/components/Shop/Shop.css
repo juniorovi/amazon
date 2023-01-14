@@ -12,11 +12,14 @@
 
 .cart-container{
     background: rgba(255, 153, 0, 0.3);
-    padding: 10px;
+    padding: 23px;
 }
 
 .cart-container h3{
     text-align: center;
+}
+.cart-container p{
+    margin: 0;
 }
 
 @media screen and (max-width:1100px) {
