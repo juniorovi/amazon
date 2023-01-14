@@ -1,10 +1,11 @@
 import React from 'react';
 
-const Cart = (props) => {
+// const Cart = (props) => {
+    const Cart = ({cart}) =>{
     return (
         <div>
             <h3>Order sumary</h3>
-            <p>Selected Items: {props.cart.length}</p>
+            <p>Selected Items: {cart.length}</p>
         </div>
     );
 };
