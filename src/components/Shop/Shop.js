@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
+import useCart from '../../hooks/useCart';
 import useProducts from '../../hooks/useProducts';
 import { addToDb, getStoredCart } from '../../utilities/fakedb';
 import Cart from '../Cart/Cart';
@@ -8,9 +9,10 @@ import './Shop.css';
 
 const Shop = () => {
     const [products, setProducts] = useProducts();
-    const [cart, setCart] = useState([])
+    // const [cart, setCart] = useState([])
+    const [cart, setCart] = useCart(products)
 
-    useEffect(() => {
+    /* useEffect(() => {
         const storedCart = getStoredCart();
         const savedCart = [];
         for (const id in storedCart) {
@@ -23,6 +25,7 @@ const Shop = () => {
         }
         setCart(savedCart);
     }, [products]);
+     */
     const handleAddToCart = (selectedProduct) => {
         console.log(selectedProduct);
         let newCart = [];
